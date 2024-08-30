@@ -1,11 +1,12 @@
+/* eslint-disable react/jsx-indent-props */
 import '@mantine/core/styles.css';
 import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { theme } from '../theme';
+import { theme } from '@/theme';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Fc-FantasyClub',
+  description: 'Fantasy Club',
 };
 
 export default function RootLayout({ children }: { children: any }) {
