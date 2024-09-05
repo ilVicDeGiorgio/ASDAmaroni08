@@ -3,6 +3,8 @@ import '@mantine/core/styles.css';
 import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '@/theme';
+// import Navbar from '../components/ColorSchemeToggle/Navbar';
+import Prova from '@/components/prova';
 
 export const metadata = {
   title: 'Fc-FantasyClub',
@@ -22,6 +24,8 @@ export default function RootLayout({ children }: { children: any }) {
       </head>
       <body>
         <MantineProvider theme={theme}>{children}</MantineProvider>
+        {/* <Navbar></Navbar> */}
+        <Prova></Prova>
       </body>
     </html>
   );
