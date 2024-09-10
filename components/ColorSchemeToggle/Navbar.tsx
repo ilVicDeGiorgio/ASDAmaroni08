@@ -25,7 +25,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href="/about" className={styles.link} passHref>
+          <Link href="/squadra" className={styles.link} passHref>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
@@ -39,7 +39,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href="/contact" className={styles.link} passHref>
+          <Link href="/mercato" className={styles.link} passHref>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
@@ -53,7 +53,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href="/contact" className={styles.link} passHref>
+          <Link href="/classifica" className={styles.link} passHref>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
