@@ -1,0 +1,44 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #182b34;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5.9375rem; // 95px in rem
+  font-size: 1rem;
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 1rem;
+
+    li {
+      font-size: 1rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        width: 5rem;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: #0d171cff;
+          color: #e6a34cff;
+        }
+
+        svg {
+          height: 40px;
+          width: 40px;
+        }      
+      }
+    }
+  }
+}

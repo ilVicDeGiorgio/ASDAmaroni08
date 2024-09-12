@@ -1,9 +1,8 @@
 /* eslint-disable react/jsx-indent-props */
 import '@mantine/core/styles.css';
 import React from 'react';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { theme } from '@/theme';
-import Navbar from '../components/ColorSchemeToggle/Navbar';
+import { ColorSchemeScript } from '@mantine/core';
+import Navbar from '../components/Navbar/Navbar';
 
 export const metadata = {
   title: 'Fc-FantasyClub',
@@ -23,7 +22,8 @@ export default function RootLayout({ children }: { children: any }) {
       </head>
       <body>
         {/* <MantineProvider theme={theme}>{children}</MantineProvider> */}
-        <Navbar></Navbar>
+        <Navbar/>
+        {children}
       </body>
     </html>
   );

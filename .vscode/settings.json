@@ -3,5 +3,8 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
