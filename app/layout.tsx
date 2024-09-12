@@ -5,7 +5,7 @@ import { MantineProvider } from '@mantine/core';
 import { theme } from '@/theme';
 import clsx from 'clsx';
 
-import styles from './layout.module.scss'
+import styles from './layout.module.scss';
 
 export const metadata = {
   title: 'Fc-FantasyClub',
