@@ -1,2 +1,10 @@
-//empty file
+.root {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: 
+        "carousel"
+        "playerList";
+  align-items: center;
+  justify-content: center;
+}
 
