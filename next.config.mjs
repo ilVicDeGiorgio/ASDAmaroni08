@@ -12,4 +12,8 @@ export default withBundleAnalyzer({
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
+  sassOptions: {
+    prependData: 
+      `@import "./styles/global.scss";`,
+  },
 });
