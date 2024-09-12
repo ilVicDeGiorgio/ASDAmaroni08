@@ -1,8 +1,10 @@
 /* eslint-disable react/jsx-indent-props */
 import '@mantine/core/styles.css';
 import React from 'react';
-import { ColorSchemeScript } from '@mantine/core';
+import clsx from 'clsx';
 import Navbar from '../components/Navbar/Navbar';
+
+import styles from './layout.module.scss';
 
 export const metadata = {
   title: 'Fc-FantasyClub',
@@ -19,7 +21,7 @@ export default function RootLayout({ children }: { children: any }) {
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <body>
+      <body className={clsx(styles.root)}>
         {/* <MantineProvider theme={theme}>{children}</MantineProvider> */}
         {children}
         <Navbar/>
