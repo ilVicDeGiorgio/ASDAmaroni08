@@ -2,8 +2,8 @@
 import '@mantine/core/styles.css';
 import React from 'react';
 import { MantineProvider } from '@mantine/core';
-import { theme } from '@/theme';
 import clsx from 'clsx';
+import { theme } from '@/theme';
 
 import styles from './layout.module.scss';
 
