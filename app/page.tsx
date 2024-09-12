@@ -1,7 +1,5 @@
-
-import clsx from 'clsx';
-import styles from './page.module.scss';
+import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
 
 export default function HomePage() {
-  return <div className={clsx(styles.prova, styles.root)}>ciao</div>;
+  return <ColorSchemeToggle />;
 }
