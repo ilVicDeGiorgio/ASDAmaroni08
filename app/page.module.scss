@@ -1,8 +1,7 @@
+// headbar.module.scss
 .root {
-  position: relative;
-  top: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 100vh; // Imposta l'altezza della pagina al 100% della viewport
+  grid-gap: 1rem; // Spaziatura tra le righe
 }
