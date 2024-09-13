@@ -95,10 +95,10 @@
 
   .menuOverlay {
     position: fixed;
-    top: 0;
+    top: calc(4.9375rem); // Altezza della headbar + 1px per il bordo inferiore
     left: 0;
     width: 100%;
-    height: 100%;
+    bottom: calc(4.9375rem); // Altezza della navbar + 1px per il bordo inferiore
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     display: flex;
