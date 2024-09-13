@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #182b34;
+  background-color: var(--background-secondary);
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -34,8 +34,8 @@
         &:hover,
         &:focus,
         &:active {
-          background-color: #0d171cff;
-          color: #e6a34cff;
+          background-color: var(--background-default);
+          color: var(--gold);
         }
 
         svg {
