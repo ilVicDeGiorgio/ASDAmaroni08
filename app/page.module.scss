@@ -1,10 +1,8 @@
 .root {
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  grid-template-areas: 
-        "carousel"
-        "playerList";
+  position: relative;
+  top: 300px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-

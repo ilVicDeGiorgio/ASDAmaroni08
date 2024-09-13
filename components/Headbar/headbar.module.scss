@@ -94,14 +94,13 @@
 
   .menuOverlay {
     position: fixed;
-    top: -111px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     display: flex;
-    align-items: center;
 
     .menu {
       background: var(--background-secondary);
@@ -116,6 +115,10 @@
         padding: 0;
         margin: 0;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
 
         li {
           margin: 0.5rem 0;
@@ -136,6 +139,29 @@
           }
         }
       }
+    }
+  }
+}
+// Nuova classe per la barra di ricerca esterna
+.searchBar {
+  position: fixed;
+  top: 4.9375rem; // Altezza della headbar
+  left: 0;
+  width: 100%;
+  background-color: var(--background-secondary);
+  padding: 0.5rem 1rem;
+  z-index: 999; // Un livello sotto la headbar
+
+  .searchInput {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    outline: none;
+
+    &::placeholder {
+      color: var(--placeholder-color);
     }
   }
 }
