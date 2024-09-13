@@ -3,8 +3,8 @@
 import React, { ReactElement, useState } from 'react';
 import Link from 'next/link';
 import { PiList, PiBell, PiMagnifyingGlass, PiLog } from 'react-icons/pi';
-import Image from 'next/image'; // Importa il componente Image di Next.js
-import logo1 from '/public/FC25.png'; // Importa l'immagine come modulo
+import Image from 'next/image';
+import logo1 from '/public/FC25.png';
 import logo2 from '/public/PML.png';
 import styles from './headbar.module.scss';
 import clsx from 'clsx';
@@ -23,20 +23,10 @@ export default function Headbar(): ReactElement {
           <PiList />
         </button>
         <Link href="/" className={styles.logo}>
-          <Image
-            src={logo1} // Usa l'immagine importata
-            alt="Logo1"
-            height={74} // Imposta l'altezza dell'immagine
-            width={120} // Imposta la larghezza dell'immagine
-          />
+          <Image src={logo1} alt="Logo1" height={74} width={120} />
         </Link>
         <Link href="/" className={styles.logo}>
-          <Image
-            src={logo2} // Usa l'immagine importata
-            alt="Logo2"
-            height={44} // Imposta l'altezza dell'immagine
-            width={44} // Imposta la larghezza dell'immagine
-          />
+          <Image src={logo2} alt="Logo2" height={44} width={44} />
         </Link>
       </div>
       <div className={clsx(styles.centerSection, { [styles.searchVisible]: isSearchVisible })}>
@@ -64,22 +54,22 @@ export default function Headbar(): ReactElement {
             <ul>
               <li>
                 <Link href="/home" onClick={closeMenu}>
-                  Home
+                  Li1
                 </Link>
               </li>
               <li>
                 <Link href="/squadra" onClick={closeMenu}>
-                  Squadra
+                  Li2
                 </Link>
               </li>
               <li>
                 <Link href="/mercato" onClick={closeMenu}>
-                  Mercato
+                  li3
                 </Link>
               </li>
               <li>
                 <Link href="/classifica" onClick={closeMenu}>
-                  Classifica
+                  Li4
                 </Link>
               </li>
             </ul>
