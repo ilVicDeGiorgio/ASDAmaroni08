@@ -63,7 +63,7 @@
   width: 100%;
 }
 .logo {
-  width: 48px;
+  width: 78px;
   height: 48px;
 }
 .name {
@@ -75,6 +75,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator {
+  margin: 0 5px;
+  font-weight: bold;
 }
 
 //Per Rossella: Non Capisco perchè non funzionino le regole
