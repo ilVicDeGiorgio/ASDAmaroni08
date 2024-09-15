@@ -11,6 +11,7 @@ export default function HomePage(): ReactNode {
       <MantineProvider>
         <Demo></Demo>
       </MantineProvider>
+      <div className={styles.separator}>Partite da giocare</div>
       <div>Placeholder List</div>
     </div>
   );

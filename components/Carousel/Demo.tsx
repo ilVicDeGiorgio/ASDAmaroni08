@@ -28,27 +28,15 @@ function Demo(): ReactElement {
             <div className={styles.league}>Serie A</div>
           </div>
           <div className={styles.content}>
-            <div className={styles.teamLeft}>
-              <Image
-                src={logoMilan}
-                alt="Inter Logo"
-                className={styles.logo}
-                height={54}
-                width={54}
-              />
+            <div className={styles.team}>
+              <Image src={logoMilan} alt="Inter Logo" className={styles.logo} />
               <div className={styles.name}>AC Milan</div>
             </div>
             <div className={styles.score}>
               3<span className={styles.separator}>:</span>1
             </div>
-            <div className={styles.teamRight}>
-              <Image
-                src={LogoLazio}
-                alt="Milan Logo"
-                className={styles.logo}
-                height={64}
-                width={64}
-              />
+            <div className={styles.team}>
+              <Image src={LogoLazio} alt="Milan Logo" className={styles.logo} />
               <div className={styles.name}>SS Lazio</div>
             </div>
           </div>
@@ -63,28 +51,28 @@ function Demo(): ReactElement {
             <div className={styles.league}>Serie A</div>
           </div>
           <div className={styles.content}>
-            <div className={styles.teamLeft}>
+            <div className={styles.team}>
               <Image
-                src={LogoInter}
+                src={LogoFanta}
                 alt="Team 1 Logo"
                 className={styles.logo}
                 height={64}
                 width={120}
               />
-              <div className={styles.name}>FC Lombardia</div>
+              <div className={styles.name}>Team45</div>
             </div>
             <div className={styles.score}>
               2<span className={styles.separator}>:</span>2
             </div>
-            <div className={styles.teamRight}>
+            <div className={styles.team}>
               <Image
-                src={LogoRoma}
+                src={LogoFanta}
                 alt="Team 2 Logo"
                 className={styles.logo}
                 height={54}
                 width={100}
               />
-              <div className={styles.name}>As Roma</div>
+              <div className={styles.name}>Team23</div>
             </div>
           </div>
         </div>
@@ -98,7 +86,7 @@ function Demo(): ReactElement {
             <div className={styles.league}>Serie A</div>
           </div>
           <div className={styles.content}>
-            <div className={styles.teamLeft}>
+            <div className={styles.team}>
               <Image
                 src={LogoFanta}
                 alt="Team 3 Logo"
@@ -111,7 +99,7 @@ function Demo(): ReactElement {
             <div className={styles.score}>
               1<span className={styles.separator}>:</span>4
             </div>
-            <div className={styles.teamRight}>
+            <div className={styles.team}>
               <Image
                 src={LogoFanta}
                 alt="Team 4 Logo"
