@@ -1,0 +1,131 @@
+'use client';
+
+import React, { ReactElement } from 'react';
+import { Carousel } from '@mantine/carousel';
+import '@mantine/carousel/styles.css'; // Mantine CSS se ancora ne hai bisogno
+import styles from './Demo.module.scss'; // Importa il modulo SCSS
+import Image from 'next/image';
+import logoMilan from '/public/LogoMilan.png';
+import LogoLazio from '/public/LogoLazio.png';
+import LogoInter from '/public/LogoInter.png';
+import LogoRoma from '/public/LogoRoma.png';
+import LogoFanta from '/public/LogoFanta.png';
+
+function Demo(): ReactElement {
+  return (
+    <Carousel
+      slideSize="70%"
+      height={200}
+      slideGap="xl"
+      controlsOffset="xs"
+      className={styles.carouselWrapper}
+    >
+      {/* Slide 1 */}
+      <Carousel.Slide>
+        <div className={styles.carouselSlide}>
+          <div className={styles.header}>
+            Partite recenti
+            <div className={styles.league}>Serie A</div>
+          </div>
+          <div className={styles.content}>
+            <div className={styles.teamLeft}>
+              <Image
+                src={logoMilan}
+                alt="Inter Logo"
+                className={styles.logo}
+                height={54}
+                width={54}
+              />
+              <div className={styles.name}>AC Milan</div>
+            </div>
+            <div className={styles.score}>
+              3<span className={styles.separator}>:</span>1
+            </div>
+            <div className={styles.teamRight}>
+              <Image
+                src={LogoLazio}
+                alt="Milan Logo"
+                className={styles.logo}
+                height={64}
+                width={64}
+              />
+              <div className={styles.name}>SS Lazio</div>
+            </div>
+          </div>
+        </div>
+      </Carousel.Slide>
+
+      {/* Slide 2 */}
+      <Carousel.Slide>
+        <div className={styles.carouselSlide}>
+          <div className={styles.header}>
+            Partite recenti
+            <div className={styles.league}>Serie A</div>
+          </div>
+          <div className={styles.content}>
+            <div className={styles.teamLeft}>
+              <Image
+                src={LogoInter}
+                alt="Team 1 Logo"
+                className={styles.logo}
+                height={64}
+                width={120}
+              />
+              <div className={styles.name}>FC Lombardia</div>
+            </div>
+            <div className={styles.score}>
+              2<span className={styles.separator}>:</span>2
+            </div>
+            <div className={styles.teamRight}>
+              <Image
+                src={LogoRoma}
+                alt="Team 2 Logo"
+                className={styles.logo}
+                height={54}
+                width={100}
+              />
+              <div className={styles.name}>As Roma</div>
+            </div>
+          </div>
+        </div>
+      </Carousel.Slide>
+
+      {/* Slide 3 */}
+      <Carousel.Slide>
+        <div className={styles.carouselSlide}>
+          <div className={styles.header}>
+            Partite recenti
+            <div className={styles.league}>Serie A</div>
+          </div>
+          <div className={styles.content}>
+            <div className={styles.teamLeft}>
+              <Image
+                src={LogoFanta}
+                alt="Team 3 Logo"
+                className={styles.logo}
+                height={54}
+                width={100}
+              />
+              <div className={styles.name}>Team3</div>
+            </div>
+            <div className={styles.score}>
+              1<span className={styles.separator}>:</span>4
+            </div>
+            <div className={styles.teamRight}>
+              <Image
+                src={LogoFanta}
+                alt="Team 4 Logo"
+                className={styles.logo}
+                height={54}
+                width={80}
+              />
+              <div className={styles.name}>Team4</div>
+            </div>
+          </div>
+        </div>
+      </Carousel.Slide>
+    </Carousel>
+  );
+}
+
+export default Demo;
