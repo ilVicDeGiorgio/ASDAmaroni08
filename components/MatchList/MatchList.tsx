@@ -2,7 +2,6 @@
 
 import React, { ReactElement } from 'react';
 import style from './MatchList.module.scss';
-import LogoLazio from '/public/LogoLazio.png';
 
 const matches = [
   {

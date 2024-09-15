@@ -2,11 +2,10 @@
 
 import React, { ReactElement } from 'react';
 import { Carousel } from '@mantine/carousel';
-import '@mantine/carousel/styles.css'; // Mantine CSS se ancora ne hai bisogno
-import styles from './Demo.module.scss'; // Importa il modulo SCSS
+import '@mantine/carousel/styles.css';
+import styles from './Demo.module.scss';
 import Image from 'next/image';
 
-// Definisci i dati delle partite
 const matches = [
   {
     competition: 'Serie A',
@@ -43,6 +42,30 @@ const matches = [
       logo: 'https://www.logofantacalcio.it/wp-content/uploads/2024/04/logo-fantacalcio-stemma.png',
     },
     score: '1:4',
+  },
+  {
+    competition: 'Serie A',
+    homeTeam: {
+      name: 'AC Milan',
+      logo: 'https://1000marche.net/wp-content/uploads/2020/03/AC-Milan-Logo-1995.png',
+    },
+    awayTeam: {
+      name: 'SS Lazio',
+      logo: 'https://upload.wikimedia.org/wikipedia/it/archive/6/62/20190806203656%21Stemma_della_Societ%C3%A0_Sportiva_Lazio.svg',
+    },
+    score: '3:1',
+  },
+  {
+    competition: 'Serie A',
+    homeTeam: {
+      name: 'Team45',
+      logo: 'https://www.maestridelcalcio.com/wp-content/uploads/2020/07/real-madrid-logo-png-12.png',
+    },
+    awayTeam: {
+      name: 'Team23',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg/2048px-Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg.png',
+    },
+    score: '2:2',
   },
 ];
 
