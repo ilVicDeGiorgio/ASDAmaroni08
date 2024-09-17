@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: any }) {
       <body className={clsx(styles.root)}>
         {/* <MantineProvider theme={theme}>{children}</MantineProvider> */}
         {children}
-        <Navbar/>
+        <Navbar />
       </body>
     </html>
   );
