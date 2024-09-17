@@ -1,9 +1,8 @@
 /* eslint-disable react/jsx-indent-props */
 import '@mantine/core/styles.css';
 import React from 'react';
-import { MantineProvider } from '@mantine/core';
 import clsx from 'clsx';
-import { theme } from '@/theme';
+import Navbar from '../components/Navbar/Navbar';
 
 import styles from './layout.module.scss';
 
@@ -23,7 +22,9 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body className={clsx(styles.root)}>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        {/* <MantineProvider theme={theme}>{children}</MantineProvider> */}
+        {children}
+        <Navbar />
       </body>
     </html>
   );
