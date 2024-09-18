@@ -2,8 +2,10 @@
 .root {
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
   height: 100vh; // Imposta l'altezza della pagina al 100% della viewport
   grid-gap: 1rem; // Spaziatura tra le righe
+  margin-bottom: 10px;
 }
 
 .separator {
