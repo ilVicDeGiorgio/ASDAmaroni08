@@ -107,10 +107,4 @@ function MatchList(): ReactElement {
   );
 }
 
-// Funzione che verrà eseguita quando si clicca sul pulsante
-function handleMatchClick(match) {
-  // Logica per andare al match specifico
-  console.log(`Vai alla partita: ${match.homeTeam.name} vs ${match.awayTeam.name}`);
-}
-
 export default MatchList;
