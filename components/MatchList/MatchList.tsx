@@ -2,6 +2,8 @@
 
 import React, { ReactElement } from 'react';
 import style from './MatchList.module.scss';
+import { HiMiniArrowUpTray } from 'react-icons/hi2';
+import Link from 'next/link';
 
 const matches = [
   {
@@ -92,11 +94,23 @@ function MatchList(): ReactElement {
                 </div>
               </div>
             </div>
+            <div className={style.matchButton}>
+              <Link className={style.arrowButton} href="/match" passHref>
+                <HiMiniArrowUpTray />
+              </Link>
+            </div>
+            {/* Qui aggiungiamo il pulsante */}
           </div>
         </div>
       ))}
     </div>
   );
+}
+
+// Funzione che verrà eseguita quando si clicca sul pulsante
+function handleMatchClick(match) {
+  // Logica per andare al match specifico
+  console.log(`Vai alla partita: ${match.homeTeam.name} vs ${match.awayTeam.name}`);
 }
 
 export default MatchList;

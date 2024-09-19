@@ -6,12 +6,17 @@
 
 .matchItem {
   border-radius: 8px;
-  overflow: hidden; // Per evitare che i bordi si sovrappongano quando c'è border-radius.
+  max-width: 325px;
+  margin-left: 20px;
+  overflow: visible;
+  position: relative; // Aggiungi questa riga per posizionare il bottone in modo assoluto rispetto al matchItem.
 }
 
 .competitionSection {
-  background-color: var(--background-tertiary); // Colore di sfondo per il titolo della competizione
+  background-color: var(--background-tertiary);
   padding: 0.5rem 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .competitionTitle {
@@ -27,6 +32,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .teams {
@@ -64,4 +71,34 @@
 .vs {
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+/* Qui si posiziona il bottone */
+.matchButton {
+  position: absolute;
+  right: -46px;
+  top: 50%;
+  transform: translateY(-50%); // Assicura che il bottone sia perfettamente centrato
+}
+
+.arrowButton {
+  color: #46c252; // Colore verde per il bottone
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%; // Arrotonda il bottone
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.arrowButton img {
+  width: 16px; // Dimensioni dell'icona
+  height: 16px;
 }
