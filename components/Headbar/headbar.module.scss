@@ -17,6 +17,7 @@
     align-items: center;
 
     .menuButton {
+      display: flex;
       background: none;
       border: none;
       font-size: 1.5rem;
@@ -49,6 +50,7 @@
     align-items: center;
 
     .searchButton {
+      display: flex;
       background: none;
       border: none;
       font-size: 1.5rem;
@@ -80,6 +82,7 @@
     align-items: center;
 
     .notificationsButton {
+      display: flex;
       background: none;
       border: none;
       font-size: 1.5rem;
