@@ -7006,6 +7006,7 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-import@npm:^2.30.0":
+"eslint-plugin-import@npm:^2.30.0":
   version: 2.30.0
   resolution: "eslint-plugin-import@npm:2.30.0"
   dependencies:
@@ -10100,6 +10101,7 @@ __metadata:
     jest-environment-jsdom: "npm:^29.7.0"
     next: "npm:^14.2.8"
     postcss: "npm:^8.4.44"
+    postcss: "npm:^8.4.44"
     postcss-preset-mantine: "npm:1.17.0"
     postcss-simple-vars: "npm:^7.0.1"
     prettier: "npm:^3.3.3"
@@ -10107,6 +10109,7 @@ __metadata:
     react-dom: "npm:18.3.1"
     react-icons: "npm:^5.3.0"
     sass: "npm:^1.78.0"
+    storybook: "npm:^8.2.9"
     storybook: "npm:^8.2.9"
     storybook-dark-mode: "npm:^4.0.2"
     stylelint: "npm:^16.9.0"
@@ -13552,6 +13555,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-jest@npm:^29.2.5":
 "ts-jest@npm:^29.2.5":
   version: 29.2.5
   resolution: "ts-jest@npm:29.2.5"
