@@ -10,7 +10,7 @@
   max-width: 325px;
   margin-left: 20px;
   overflow: visible;
-  position: relative; // Aggiungi questa riga per posizionare il bottone in modo assoluto rispetto al matchItem.
+  position: relative;
 }
 
 .competitionSection {
@@ -79,15 +79,15 @@
   position: absolute;
   right: -46px;
   top: 50%;
-  transform: translateY(-50%); // Assicura che il bottone sia perfettamente centrato
+  transform: translateY(-50%);
 }
 
 .arrowButton {
-  color: #46c252; // Colore verde per il bottone
+  color: #46c252;
   background-color: transparent;
   border: none;
   padding: 0.5rem;
-  border-radius: 50%; // Arrotonda il bottone
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -100,6 +100,6 @@
 }
 
 .arrowButton img {
-  width: 16px; // Dimensioni dell'icona
+  width: 16px;
   height: 16px;
 }

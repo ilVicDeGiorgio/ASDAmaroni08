@@ -2,44 +2,22 @@
 
 import React, { ReactElement, useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { PiList, PiBell, PiMagnifyingGlass, PiLog } from 'react-icons/pi';
+import { PiList, PiBell, PiMagnifyingGlass } from 'react-icons/pi';
 import Image from 'next/image';
 import logo1 from '/public/FC25.png';
 import logo2 from '/public/PML.png';
+import { Dialog, Group, Button, TextInput, Text, MantineProvider } from '@mantine/core';
 import styles from './headbar.module.scss';
 import clsx from 'clsx';
 import { useDisclosure } from '@mantine/hooks';
-import { Dialog, Group, Button, TextInput, Text, MantineProvider } from '@mantine/core';
 
 export default function Headbar(): ReactElement {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSearchVisible, setSearchVisible] = useState(false);
   const [opened, { toggle, close }] = useDisclosure(false);
 
-  // Riferimento per la barra di ricerca
-  const searchBarRef = useRef<HTMLDivElement>(null);
-
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
-
-  // Chiudi la barra di ricerca quando clicchi fuori da essa
-  // PS: Ross, quando vedrai questo useEffect, sappi che ci ho litigato 2 ore.
-  //    Funziona ma non riesco a trovare un modo per scriverlo diversamente :(
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchBarRef.current && !searchBarRef.current.contains(event.target as Node)) {
-        setSearchVisible(false); // Nasconde la barra di ricerca di
-      }
-    };
-
-    if (isSearchVisible) {
-      document.addEventListener('click', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, [isSearchVisible]);
 
   return (
     <>
@@ -58,17 +36,32 @@ export default function Headbar(): ReactElement {
         <div className={styles.centerSection}>
           <MantineProvider>
             <Group justify="center">
-              <Button onClick={toggle}>Toggle dialog</Button>
+              <Button onClick={toggle} className={styles.searchButton}>
+                <PiMagnifyingGlass />
+              </Button>
             </Group>
 
-            <Dialog opened={opened} withCloseButton onClose={close} size="lg" radius="md">
+            <Dialog
+              opened={opened}
+              withCloseButton
+              onClose={close}
+              size="lg"
+              radius="md"
+              className={styles.searchBar}
+            >
               <Text size="sm" mb="xs" fw={500}>
-                Subscribe to email newsletter
+                Cerca Giocatore
               </Text>
 
               <Group align="flex-end">
-                <TextInput placeholder="hello@gluesticker.com" style={{ flex: 1 }} />
-                <Button onClick={close}>Subscribe</Button>
+                <TextInput
+                  placeholder="Mario Balotelli..."
+                  style={{ flex: 1 }}
+                  className={styles.searchInput}
+                />
+                <Button onClick={close} className={styles.button}>
+                  Search
+                </Button>
               </Group>
             </Dialog>
           </MantineProvider>
@@ -107,19 +100,7 @@ export default function Headbar(): ReactElement {
           </div>
         )}
       </header>
-
-      {/* La barra di ricerca visibile sotto la headbar */}
-      {isSearchVisible && (
-        <div className={styles.searchBar} ref={searchBarRef}>
-          <input
-            type="text"
-            placeholder="Cerca..."
-            className={styles.searchInput}
-            onBlur={() => setSearchVisible(false)}
-            // Nasconde la barra di ricerca al perdere del focus
-          />
-        </div>
-      )}
+      {/**/}
     </>
   );
 }
