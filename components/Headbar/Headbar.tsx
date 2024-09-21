@@ -8,10 +8,13 @@ import logo1 from '/public/FC25.png';
 import logo2 from '/public/PML.png';
 import styles from './headbar.module.scss';
 import clsx from 'clsx';
+import { useDisclosure } from '@mantine/hooks';
+import { Dialog, Group, Button, TextInput, Text, MantineProvider } from '@mantine/core';
 
 export default function Headbar(): ReactElement {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSearchVisible, setSearchVisible] = useState(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
 
   // Riferimento per la barra di ricerca
   const searchBarRef = useRef<HTMLDivElement>(null);
@@ -53,9 +56,22 @@ export default function Headbar(): ReactElement {
           </Link>
         </div>
         <div className={styles.centerSection}>
-          <button className={styles.searchButton} onClick={() => setSearchVisible(true)}>
-            <PiMagnifyingGlass />
-          </button>
+          <MantineProvider>
+            <Group justify="center">
+              <Button onClick={toggle}>Toggle dialog</Button>
+            </Group>
+
+            <Dialog opened={opened} withCloseButton onClose={close} size="lg" radius="md">
+              <Text size="sm" mb="xs" fw={500}>
+                Subscribe to email newsletter
+              </Text>
+
+              <Group align="flex-end">
+                <TextInput placeholder="hello@gluesticker.com" style={{ flex: 1 }} />
+                <Button onClick={close}>Subscribe</Button>
+              </Group>
+            </Dialog>
+          </MantineProvider>
         </div>
         <div className={styles.rightSection}>
           <button className={styles.notificationsButton}>
