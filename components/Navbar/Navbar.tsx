@@ -31,7 +31,7 @@ export default function Navbar(): ReactElement {
           </Link>
         </li>
         <li>
-          <Link href="/classifica" passHref>
+          <Link href="/classifica">
             <PiRanking />
             Classifica
           </Link>
