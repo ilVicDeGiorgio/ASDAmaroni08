@@ -14,7 +14,6 @@
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-family: 'Arial', sans-serif;
 
   @media screen and (min-width: 768px) {
     width: 60%;
@@ -31,8 +30,9 @@
 }
 
 .score {
-  font-size: 32px;
+  font-size: xx-large;
   font-weight: bold;
+  font-style: italic;
   display: flex;
   align-items: center;
   color: white;

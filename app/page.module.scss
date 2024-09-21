@@ -1,6 +1,7 @@
 // headbar.module.scss
 .root {
   display: flex;
+  background-color: var(--background-default);
   flex-direction: column;
   overflow-y: scroll;
   height: 100vh;
@@ -11,6 +12,5 @@
 .separator {
   padding: 10px;
   background-color: var(--background-secondary);
-  font-family: 'Arial', sans-serif;
   font-size: 18px;
 }
