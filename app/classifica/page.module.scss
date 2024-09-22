@@ -17,13 +17,17 @@
 }
 
 .tabButton {
-  background-color: cadetblue;
+  background-color: #182b34;
   border: none;
   color: #fff;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+
+  span {
+    font-weight: bold;
+  }
 }
 
 .tabButton:hover {
@@ -110,7 +114,7 @@
   .standingsTable th,
   .standingsTable td {
     padding: 6px;
-    font-size: 0.8rem; /* Riduce la dimensione del testo per schermi piccoli */
+    font-size: 11px; /* Riduce la dimensione del testo per schermi piccoli */
   }
 
   .standingsTable {

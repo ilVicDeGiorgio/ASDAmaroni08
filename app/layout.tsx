@@ -7,6 +7,7 @@ import Headbar from '@/components/Headbar/Headbar';
 
 import styles from './layout.module.scss';
 import { Poppins } from '@next/font/google';
+import { MantineProvider } from '@mantine/core';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -32,7 +33,7 @@ export default function RootLayout({ children }: { children: any }) {
         <div>
           <Headbar />
           {/* <MantineProvider theme={theme}>{children}</MantineProvider> */}
-          {children}
+          <MantineProvider>{children}</MantineProvider>
           <Navbar />
         </div>
       </body>

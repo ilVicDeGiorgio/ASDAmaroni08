@@ -6,6 +6,7 @@ import { PiHouseLight, PiUsersThree, PiSwap, PiRanking } from 'react-icons/pi';
 import clsx from 'clsx';
 
 import styles from './navbar.module.scss';
+import { MantineProvider } from '@mantine/core';
 
 export default function Navbar(): ReactElement {
   return (
@@ -31,10 +32,12 @@ export default function Navbar(): ReactElement {
           </Link>
         </li>
         <li>
-          <Link href="/classifica">
-            <PiRanking />
-            Classifica
-          </Link>
+          <MantineProvider>
+            <Link href="/classifica">
+              <PiRanking />
+              Classifica
+            </Link>
+          </MantineProvider>
         </li>
       </ul>
     </nav>
