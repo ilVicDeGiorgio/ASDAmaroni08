@@ -17,7 +17,7 @@ function Calendario() {
           <button className={styles.navButton}>Statistiche</button>
         </Link>
       </div>
-      <h1>Calendario</h1>
+      <div className={styles.calendario}>Calendario Stagione</div>
     </div>
   );
 }
