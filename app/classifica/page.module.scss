@@ -5,7 +5,7 @@
   overflow-y: auto;
   height: 80vh;
   grid-gap: 1rem;
-  padding: 1rem;
+  padding-top: 10px;
 }
 
 .header {
@@ -45,10 +45,9 @@
   color: #00d6a3;
 }
 
-/* Responsive table container */
 .standingsTableContainer {
   width: 100%;
-  overflow-x: auto; /* Permette lo scrolling orizzontale se necessario */
+  overflow-x: auto;
 }
 
 .standingsTable {
@@ -72,16 +71,16 @@
 }
 
 .standingsTable th {
-  background-color: var(--background-tertiary);
+  background-color: #223b48;
   color: #f9f9f9;
 }
 
 .standingsTable tbody tr:nth-child(odd) {
-  background-color: var(--background-secondary);
+  background-color: #182b34;
 }
 
 .standingsTable tbody tr:nth-child(even) {
-  background-color: var(--background-tertiary);
+  background-color: #223b48;
 }
 
 .standingsTable thead th:first-child {
@@ -108,16 +107,82 @@
 
   .tabButton {
     padding: 8px 12px;
-    font-size: 0.9rem;
+    height: 45px;
   }
 
   .standingsTable th,
   .standingsTable td {
     padding: 6px;
-    font-size: 11px; /* Riduce la dimensione del testo per schermi piccoli */
+    font-size: 11px;
   }
 
   .standingsTable {
-    min-width: 360px; /* Imposta una larghezza minima per evitare che la tabella diventi troppo piccola */
+    min-width: 360px;
   }
+}
+
+.serieA {
+  height: 35px;
+  background-color: #89eeef;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.serieB {
+  height: 35px;
+  background-color: #f5e368;
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 2.2); /* Ombra leggera */
+  transition: box-shadow 0.3s ease;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.champions {
+  height: 35px;
+  background-color: #719bef;
+  color: black;
+  text-align: center;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.europaLeague {
+  height: 35px;
+  background-color: #e6a34c;
+  color: black;
+  text-align: center;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.pmlCup {
+  height: 35px;
+  background-color: #46c252;
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 2.2); /* Ombra leggera */
+  transition: box-shadow 0.3s ease;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
