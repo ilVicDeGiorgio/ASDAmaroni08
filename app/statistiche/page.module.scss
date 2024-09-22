@@ -1,0 +1,32 @@
+.standingsContainer {
+  display: flex;
+  background-color: #0d171c; //Devo ricordarmi di capire perchè non funzionano le variabili
+  flex-direction: column;
+  overflow-y: auto;
+  height: 80vh;
+  grid-gap: 1rem;
+  padding-top: 10px;
+}
+
+.miniHeadbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #182b34;
+  height: 40px;
+  padding: 5px;
+
+  button {
+    background-color: #223b48;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+
+    &:focus,
+    &:active {
+      background-color: #e6a34c; // Colore di sfondo quando il pulsante è in focus o attivo
+      color: black; // Colore del testo quando il pulsante è in focus o attivo
+      outline: none; // Rimuovi il contorno di default
+    }
+  }
+}

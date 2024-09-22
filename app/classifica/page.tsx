@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Accordion, AccordionItem, AccordionControl, AccordionPanel, Table } from '@mantine/core';
 import styles from './page.module.scss';
 
@@ -152,6 +153,18 @@ const standingsData = {
 function Classifica() {
   return (
     <div className={styles.standingsContainer}>
+      <div className={styles.miniHeadbar}>
+        <Link href="/classifica">
+          <button className={styles.navButton}>Classifiche</button>
+        </Link>
+        <Link href="/calendario">
+          <button className={styles.navButton}>Calendario</button>
+        </Link>
+        <Link href="/statistiche">
+          <button className={styles.navButton}>Statistiche</button>
+        </Link>
+      </div>
+
       <Accordion className={styles.accordionContainer}>
         <AccordionItem value="serie-a">
           <AccordionControl className={(styles.tabButton, styles.serieA)}>Serie A</AccordionControl>

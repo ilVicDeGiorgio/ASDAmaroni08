@@ -186,3 +186,26 @@
   flex-direction: column;
   gap: 5px;
 }
+
+.miniHeadbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #182b34;
+  height: 40px;
+  padding: 5px;
+
+  button {
+    background-color: #223b48;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+
+    &:focus,
+    &:active {
+      background-color: #e6a34c; // Colore di sfondo quando il pulsante è in focus o attivo
+      color: black; // Colore del testo quando il pulsante è in focus o attivo
+      outline: none; // Rimuovi il contorno di default
+    }
+  }
+}
