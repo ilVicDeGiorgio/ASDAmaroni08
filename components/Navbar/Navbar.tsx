@@ -13,7 +13,7 @@ export default function Navbar(): ReactElement {
       <ul>
         {/* Link della navbar */}
         <li>
-          <Link href="/home" passHref>
+          <Link href="/" passHref>
             <PiHouseLight />
             Home
           </Link>
