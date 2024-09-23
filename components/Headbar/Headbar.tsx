@@ -1,8 +1,16 @@
 'use client';
 
-import React, { ReactElement, useState, useEffect, useRef } from 'react';
+import React, { ReactElement, useState } from 'react';
 import Link from 'next/link';
 import { PiList, PiBell, PiMagnifyingGlass } from 'react-icons/pi';
+import { RiAdminFill } from 'react-icons/ri';
+import { CgProfile } from 'react-icons/cg';
+import { GiSoccerBall } from 'react-icons/gi';
+import { FaFileContract } from 'react-icons/fa6';
+import { IoSettingsSharp } from 'react-icons/io5';
+import { TbBusinessplan } from 'react-icons/tb';
+import { MdMapsHomeWork } from 'react-icons/md';
+
 import Image from 'next/image';
 import logo1 from '/public/FC25.png';
 import logo2 from '/public/PML.png';
@@ -76,23 +84,45 @@ export default function Headbar(): ReactElement {
             <nav className={styles.menu}>
               <ul>
                 <li>
-                  <Link href="/home" onClick={closeMenu}>
-                    Home
+                  <Link href="/admin" onClick={closeMenu}>
+                    <RiAdminFill />
+                    Admin
                   </Link>
                 </li>
                 <li>
-                  <Link href="/squadra" onClick={closeMenu}>
-                    Squadra
+                  <Link href="/profilo" onClick={closeMenu}>
+                    <CgProfile />
+                    Il mio profilo
                   </Link>
                 </li>
                 <li>
-                  <Link href="/mercato" onClick={closeMenu}>
-                    Mercato
+                  <Link href="/myteam" onClick={closeMenu}>
+                    <GiSoccerBall />
+                    La mia squadra
                   </Link>
                 </li>
                 <li>
-                  <Link href="/classifica" onClick={closeMenu}>
-                    Classifica
+                  <Link href="/gestione-team" onClick={closeMenu}>
+                    <IoSettingsSharp />
+                    Gestisci team
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/gestione-contratti" onClick={closeMenu}>
+                    <FaFileContract />
+                    Gestisci contratti
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/gestione-societaria" onClick={closeMenu}>
+                    <MdMapsHomeWork />
+                    Gestione societaria
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cassa" onClick={closeMenu}>
+                    <TbBusinessplan />
+                    Movimenti di cassa
                   </Link>
                 </li>
               </ul>
