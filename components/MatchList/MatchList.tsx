@@ -95,11 +95,25 @@ function MatchList(): ReactElement {
               </div>
             </div>
             <div className={style.matchButton}>
-              <Link className={style.arrowButton} href="/match" passHref>
+              <Link
+                className={style.arrowButton}
+                href={{
+                  pathname: '/MatchReport',
+                  query: {
+                    competition: match.competition,
+                    homeTeamName: match.homeTeam.name,
+                    homeTeamLogo: match.homeTeam.logo,
+                    homeTeamPlayer: match.homeTeam.player,
+                    awayTeamName: match.awayTeam.name,
+                    awayTeamLogo: match.awayTeam.logo,
+                    awayTeamPlayer: match.awayTeam.player,
+                  },
+                }}
+                passHref
+              >
                 <HiMiniArrowUpTray />
               </Link>
             </div>
-            {/* Qui aggiungiamo il pulsante */}
           </div>
         </div>
       ))}

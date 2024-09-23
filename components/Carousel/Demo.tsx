@@ -11,7 +11,7 @@ const matches = [
     competition: 'Serie A',
     homeTeam: {
       name: 'AC Milan',
-      logo: 'https://1000marche.net/wp-content/uploads/2020/03/AC-Milan-Logo-1995.png',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/1306px-Logo_of_AC_Milan.svg.png',
     },
     awayTeam: {
       name: 'SS Lazio',

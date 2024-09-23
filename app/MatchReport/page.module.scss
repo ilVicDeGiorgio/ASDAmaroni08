@@ -1,0 +1,151 @@
+.rootReport {
+  display: flex;
+  background-color: #0d171c;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 80vh;
+  grid-gap: 1rem;
+}
+
+.matchReport {
+  background-color: #182b34;
+  color: #e3e8ea;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+
+  .header {
+    text-align: center;
+    .reportTitle {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .matchInfo {
+      font-size: 18px;
+      color: #b0bec5;
+      margin-top: 5px;
+    }
+  }
+
+  .scoreSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    .teamInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+
+      .teamName {
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-top: 5px;
+      }
+
+      .userName {
+        font-size: 16px;
+        color: #ffbe0b;
+      }
+    }
+
+    .score {
+      font-size: 50px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+  }
+
+  .scorersSection,
+  .assistSection {
+    margin-top: 30px;
+
+    h3 {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .scorers,
+    .assists {
+      display: flex;
+      justify-content: space-between;
+
+      .scorerItem,
+      .assistItem {
+        display: flex;
+        flex-direction: column;
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          background-color: #132b38;
+          padding: 5px 10px;
+          border-radius: 5px;
+          margin-bottom: 5px;
+
+          span {
+            font-size: 16px;
+            color: #ffffff;
+          }
+
+          span:last-child {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .confirmButton {
+    background-color: #27ae60;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+      background-color: #2ecc71;
+    }
+  }
+}
+
+.backButtonContainer {
+  text-align: center;
+  top: 10px;
+  left: 10px;
+  margin-top: 10px;
+  background-color: #223b48;
+  color: white;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  /* cursor: pointer; */
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.backButton {
+  background-color: #223b48;
+  border: none;
+}
+
+.backButton:hover {
+  background-color: #005bb5;
+}
