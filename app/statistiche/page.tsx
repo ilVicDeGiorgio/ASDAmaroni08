@@ -54,7 +54,7 @@ export default function Statistiche() {
         {/* Top Marcatori Serie A */}
         <AccordionItem value="top-scorers-serie-a">
           <AccordionControl className={(styles.sectionTitle, styles.serieA)}>
-            Top Marcatori Serie A
+            Marcatori
           </AccordionControl>
           <AccordionPanel>
             <div className={styles.standingsTableContainer}>
@@ -71,7 +71,7 @@ export default function Statistiche() {
                   {topScorersSerieA.map((player) => (
                     <tr key={player.position}>
                       <td>{player.position}</td>
-                      <td>{player.name}</td>
+                      <td className={styles.logoename}>{player.name}</td>
                       <td>{player.goals}</td>
                       <td>{player.team}</td>
                     </tr>
@@ -85,7 +85,7 @@ export default function Statistiche() {
         {/* Top Assistman Serie A */}
         <AccordionItem value="top-assists-serie-a">
           <AccordionControl className={(styles.sectionTitle, styles.serieA)}>
-            Top Assistman Serie A
+            Ammonizioni
           </AccordionControl>
           <AccordionPanel>
             <div className={styles.standingsTableContainer}>
@@ -102,7 +102,7 @@ export default function Statistiche() {
                   {topAssistSerieA.map((player) => (
                     <tr key={player.position}>
                       <td>{player.position}</td>
-                      <td>{player.name}</td>
+                      <td className={styles.logoename}>{player.name}</td>
                       <td>{player.assists}</td>
                       <td>{player.team}</td>
                     </tr>
@@ -116,7 +116,7 @@ export default function Statistiche() {
         {/* Top Uomo Partita Serie A */}
         <AccordionItem value="top-player-serie-a">
           <AccordionControl className={(styles.sectionTitle, styles.serieA)}>
-            Top Uomo Partita Serie A
+            Assistman
           </AccordionControl>
           <AccordionPanel>
             <div className={styles.standingsTableContainer}>
@@ -135,96 +135,6 @@ export default function Statistiche() {
                       <td>{player.position}</td>
                       <td>{player.name}</td>
                       <td>{player.matches}</td>
-                      <td>{player.team}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </AccordionPanel>
-        </AccordionItem>
-
-        <AccordionItem value="top-scorers-serie-b">
-          <AccordionControl className={(styles.sectionTitle, styles.serieB)}>
-            Top Marcatori Serie B
-          </AccordionControl>
-          <AccordionPanel>
-            <div className={styles.standingsTableContainer}>
-              <Table className={styles.standingsTable}>
-                <thead>
-                  <tr>
-                    <th>Pos.</th>
-                    <th>Nome</th>
-                    <th>Gol</th>
-                    <th>Squadra</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {topScorersSerieA.map((player) => (
-                    <tr key={player.position}>
-                      <td>{player.position}</td>
-                      <td>{player.name}</td>
-                      <td>{player.goals}</td>
-                      <td>{player.team}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </AccordionPanel>
-        </AccordionItem>
-
-        <AccordionItem value="top-assists-serie-b">
-          <AccordionControl className={(styles.sectionTitle, styles.serieB)}>
-            Top Assistman Serie B
-          </AccordionControl>
-          <AccordionPanel>
-            <div className={styles.standingsTableContainer}>
-              <Table className={styles.standingsTable}>
-                <thead>
-                  <tr>
-                    <th>Pos.</th>
-                    <th>Nome</th>
-                    <th>Gol</th>
-                    <th>Squadra</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {topScorersSerieA.map((player) => (
-                    <tr key={player.position}>
-                      <td>{player.position}</td>
-                      <td>{player.name}</td>
-                      <td>{player.goals}</td>
-                      <td>{player.team}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </AccordionPanel>
-        </AccordionItem>
-
-        <AccordionItem value="top-player-serie-b">
-          <AccordionControl className={(styles.sectionTitle, styles.serieB)}>
-            Top Uomo Partita Serie B
-          </AccordionControl>
-          <AccordionPanel>
-            <div className={styles.standingsTableContainer}>
-              <Table className={styles.standingsTable}>
-                <thead>
-                  <tr>
-                    <th>Pos.</th>
-                    <th>Nome</th>
-                    <th>Gol</th>
-                    <th>Squadra</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {topScorersSerieA.map((player) => (
-                    <tr key={player.position}>
-                      <td>{player.position}</td>
-                      <td>{player.name}</td>
-                      <td>{player.goals}</td>
                       <td>{player.team}</td>
                     </tr>
                   ))}

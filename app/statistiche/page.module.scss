@@ -89,16 +89,16 @@
 }
 
 .standingsTable th {
-  background-color: #223b48;
+  background-color: #9e1b32;
   color: #f9f9f9;
 }
 
 .standingsTable tbody tr:nth-child(odd) {
-  background-color: #182b34;
+  background-color: #fff4e1;
 }
 
 .standingsTable tbody tr:nth-child(even) {
-  background-color: #223b48;
+  background-color: #ffe8c9;
 }
 
 .standingsTable thead th:first-child {
@@ -202,5 +202,11 @@
 .accordionContainer {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+}
+
+.logoename {
+  align-items: center;
+  font-weight: bold;
   gap: 5px;
 }
