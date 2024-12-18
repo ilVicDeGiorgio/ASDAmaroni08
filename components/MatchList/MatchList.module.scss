@@ -7,10 +7,12 @@
 
 .matchItem {
   border-radius: 8px;
-  max-width: 325px;
-  margin-left: 20px;
+  // max-width: 325px;
+  margin-left: 5px;
+  margin-right: 5px;
   overflow: visible;
   position: relative;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5); /* Ombra ancora più evidente */
 }
 
 .competitionSection {
@@ -18,13 +20,14 @@
   padding: 0.5rem 1rem;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  border: 2px solid var(--background-secondary);
 }
 
 .competitionTitle {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
-  color: #00d6a3;
+  color: var(--background-secondary);
 }
 
 .matchSection {
@@ -50,8 +53,8 @@
 }
 
 .teamLogo {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   margin-right: 0.5rem;
 }
 
@@ -62,16 +65,13 @@
 
 .teamName {
   font-weight: bold;
-}
-
-.playerName {
-  color: #dfcc01;
-  font-size: 0.9rem;
+  color: white;
 }
 
 .vs {
   font-size: 1.2rem;
   font-weight: bold;
+  color: white;
 }
 
 /* Qui si posiziona il bottone */
@@ -82,24 +82,24 @@
   transform: translateY(-50%);
 }
 
-.arrowButton {
-  color: #46c252;
-  background-color: transparent;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// .arrowButton {
+//   color: #46c252;
+//   background-color: transparent;
+//   border: none;
+//   padding: 0.5rem;
+//   border-radius: 50%;
+//   cursor: pointer;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 
-  svg {
-    height: 30px;
-    width: 30px;
-  }
-}
+//   svg {
+//     height: 30px;
+//     width: 30px;
+//   }
+// }
 
-.arrowButton img {
-  width: 16px;
-  height: 16px;
-}
+// .arrowButton img {
+//   width: 16px;
+//   height: 16px;
+// }

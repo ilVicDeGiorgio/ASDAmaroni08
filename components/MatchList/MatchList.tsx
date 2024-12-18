@@ -4,58 +4,51 @@ import React, { ReactElement } from 'react';
 import style from './MatchList.module.scss';
 import { HiMiniArrowUpTray } from 'react-icons/hi2';
 import Link from 'next/link';
+import logo2 from '/public/logoamaroni.png';
 
 const matches = [
   {
-    competition: 'Serie A',
+    competition: '2ª Categoria - Girone D',
     homeTeam: {
-      name: 'Lazio',
-      logo: 'https://upload.wikimedia.org/wikipedia/it/archive/6/62/20190806203656%21Stemma_della_Societ%C3%A0_Sportiva_Lazio.svg',
-      player: 'ArdieX',
+      name: 'ASD Amaroni 08',
+      logo: '/logoamaroni.png',
     },
     awayTeam: {
-      name: 'Milan',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/1306px-Logo_of_AC_Milan.svg.png',
-      player: 'LukeTS',
+      name: 'Girifalco',
+      logo: '/girifalco.png',
     },
   },
   {
-    competition: 'Champions League',
+    competition: '2ª Categoria - Girone D',
     homeTeam: {
-      name: 'Real Madrid',
-      logo: 'https://www.maestridelcalcio.com/wp-content/uploads/2020/07/real-madrid-logo-png-12.png',
-      player: 'MrFomax',
+      name: 'Filandari Calcio',
+      logo: '/filandari.png',
     },
     awayTeam: {
-      name: 'Lazio',
-      logo: 'https://upload.wikimedia.org/wikipedia/it/archive/6/62/20190806203656%21Stemma_della_Societ%C3%A0_Sportiva_Lazio.svg',
-      player: 'ArdieX',
+      name: 'ASD Amaroni 08',
+      logo: '/logoamaroni.png',
     },
   },
   {
-    competition: 'Europa League',
+    competition: '2ª Categoria - Girone D',
     homeTeam: {
-      name: 'Bayern Monaco',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg/2048px-Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg.png',
-      player: '90Fabry',
+      name: 'ASD Amaroni 08',
+      logo: '/logoamaroni.png',
     },
     awayTeam: {
-      name: 'Lazio',
-      logo: 'https://upload.wikimedia.org/wikipedia/it/archive/6/62/20190806203656%21Stemma_della_Societ%C3%A0_Sportiva_Lazio.svg',
-      player: 'ArdieX',
+      name: 'Briatico',
+      logo: '/briatico.png',
     },
   },
   {
-    competition: 'PML Cup',
+    competition: '2ª Categoria - Girone D',
     homeTeam: {
-      name: 'Lazio',
-      logo: 'https://upload.wikimedia.org/wikipedia/it/archive/6/62/20190806203656%21Stemma_della_Societ%C3%A0_Sportiva_Lazio.svg',
-      player: 'ArdieX',
+      name: 'Francica',
+      logo: '/francica.png',
     },
     awayTeam: {
-      name: 'Inter',
-      logo: '/path/to/inter-logo.png',
-      player: 'Tepiglio',
+      name: 'ASD Amaroni 08',
+      logo: '/logoamaroni.png',
     },
   },
 ];
@@ -78,10 +71,9 @@ function MatchList(): ReactElement {
                 />
                 <div className={style.teamInfo}>
                   <div className={style.teamName}>{match.homeTeam.name}</div>
-                  <div className={style.playerName}>{match.homeTeam.player}</div>
                 </div>
               </div>
-              <span className={style.vs}>|</span>
+              <span className={style.vs}>VS</span>
               <div className={style.team}>
                 <img
                   src={match.awayTeam.logo}
@@ -90,30 +82,10 @@ function MatchList(): ReactElement {
                 />
                 <div className={style.teamInfo}>
                   <div className={style.teamName}>{match.awayTeam.name}</div>
-                  <div className={style.playerName}>{match.awayTeam.player}</div>
                 </div>
               </div>
             </div>
-            <div className={style.matchButton}>
-              <Link
-                className={style.arrowButton}
-                href={{
-                  pathname: '/MatchReport',
-                  query: {
-                    competition: match.competition,
-                    homeTeamName: match.homeTeam.name,
-                    homeTeamLogo: match.homeTeam.logo,
-                    homeTeamPlayer: match.homeTeam.player,
-                    awayTeamName: match.awayTeam.name,
-                    awayTeamLogo: match.awayTeam.logo,
-                    awayTeamPlayer: match.awayTeam.player,
-                  },
-                }}
-                passHref
-              >
-                <HiMiniArrowUpTray />
-              </Link>
-            </div>
+            <div className={style.matchButton}></div>
           </div>
         </div>
       ))}

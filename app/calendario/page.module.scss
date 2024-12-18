@@ -1,6 +1,6 @@
 .standingsContainer {
   display: flex;
-  background-color: #0d171c; //Devo ricordarmi di capire perchè non funzionano le variabili
+  background-color: #1f1f1f; //Devo ricordarmi di capire perchè non funzionano le variabili
   flex-direction: column;
   overflow-y: auto;
   height: 80vh;
@@ -191,12 +191,13 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: #182b34;
+  background-color: #9e1b32;
   height: 40px;
   padding: 5px;
 
   button {
-    background-color: #223b48;
+    background-color: #6e1426;
+    color: white;
     border: none;
     border-radius: 2px;
     font-weight: bold;
@@ -216,5 +217,5 @@
   font-style: italic;
   text-align: center;
   color: white;
-  background-color: #182b34;
+  background-color: #9e1b32;
 }

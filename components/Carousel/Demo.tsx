@@ -10,62 +10,50 @@ const matches = [
   {
     competition: 'Serie A',
     homeTeam: {
-      name: 'AC Milan',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/1306px-Logo_of_AC_Milan.svg.png',
+      name: 'ASD Amaroni 08',
+      logo: '/logoamaroni.png',
     },
     awayTeam: {
-      name: 'SS Lazio',
-      logo: 'https://upload.wikimedia.org/wikipedia/it/archive/6/62/20190806203656%21Stemma_della_Societ%C3%A0_Sportiva_Lazio.svg',
+      name: 'Nuova Medino Oratori',
+      logo: '/medino.png',
     },
     score: '3:1',
   },
   {
     competition: 'Serie A',
     homeTeam: {
-      name: 'Team45',
-      logo: 'https://www.maestridelcalcio.com/wp-content/uploads/2020/07/real-madrid-logo-png-12.png',
+      name: 'Ricadese',
+      logo: '/ricadese.png',
     },
     awayTeam: {
-      name: 'Team23',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg/2048px-Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg.png',
+      name: 'ASD Amaroni 08',
+      logo: '/logoamaroni.png',
     },
     score: '2:2',
   },
   {
     competition: 'Serie A',
     homeTeam: {
-      name: 'Team3',
-      logo: 'https://www.logofantacalcio.it/wp-content/uploads/2024/04/logo-fantacalcio-stemma.png',
+      name: 'ASD Amaroni 08',
+      logo: '/logoamaroni.png',
     },
     awayTeam: {
-      name: 'Team4',
-      logo: 'https://www.logofantacalcio.it/wp-content/uploads/2024/04/logo-fantacalcio-stemma.png',
+      name: 'San Costantino Calabro',
+      logo: '/costantino.png',
     },
     score: '1:4',
   },
   {
     competition: 'Serie A',
     homeTeam: {
-      name: 'AC Milan',
-      logo: 'https://1000marche.net/wp-content/uploads/2020/03/AC-Milan-Logo-1995.png',
+      name: 'Academy Girifalco',
+      logo: '/academyg.png',
     },
     awayTeam: {
-      name: 'SS Lazio',
-      logo: 'https://upload.wikimedia.org/wikipedia/it/archive/6/62/20190806203656%21Stemma_della_Societ%C3%A0_Sportiva_Lazio.svg',
+      name: 'ASD Amaroni 08',
+      logo: '/logoamaroni.png',
     },
     score: '3:1',
-  },
-  {
-    competition: 'Serie A',
-    homeTeam: {
-      name: 'Team45',
-      logo: 'https://www.maestridelcalcio.com/wp-content/uploads/2020/07/real-madrid-logo-png-12.png',
-    },
-    awayTeam: {
-      name: 'Team23',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg/2048px-Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg.png',
-    },
-    score: '2:2',
   },
 ];
 
@@ -81,10 +69,7 @@ function Demo(): ReactElement {
       {matches.map((match, index) => (
         <Carousel.Slide key={index}>
           <div className={styles.carouselSlide}>
-            <div className={styles.header}>
-              Partite recenti
-              <div className={styles.league}>{match.competition}</div>
-            </div>
+            <div className={styles.header}>Partite recenti</div>
             <div className={styles.content}>
               <div className={styles.team}>
                 <Image

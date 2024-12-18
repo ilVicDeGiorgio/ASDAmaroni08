@@ -13,9 +13,10 @@ import { MdMapsHomeWork } from 'react-icons/md';
 
 import Image from 'next/image';
 import logo1 from '/public/FC25.png';
-import logo2 from '/public/PML.png';
+import logo2 from '/public/logoamaroni.png';
 import { Dialog, Group, Button, TextInput, Text, MantineProvider } from '@mantine/core';
 import styles from './headbar.module.scss';
+import { Poppins } from '@next/font/google';
 import clsx from 'clsx';
 import { useDisclosure } from '@mantine/hooks';
 
@@ -35,10 +36,10 @@ export default function Headbar(): ReactElement {
             <PiList />
           </button>
           <Link href="/" className={styles.logo}>
-            <Image src={logo1} alt="Logo1" height={74} width={120} />
+            {/* spazio libero */}
           </Link>
           <Link href="/" className={styles.logo}>
-            <Image src={logo2} alt="Logo2" height={44} width={44} />
+            <div>ASD AMARONI 08</div>
           </Link>
         </div>
         <div className={styles.centerSection}>
@@ -90,39 +91,39 @@ export default function Headbar(): ReactElement {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/profilo" onClick={closeMenu}>
+                  <Link href="/giocatori" onClick={closeMenu}>
                     <CgProfile />
-                    Il mio profilo
+                    Giocatori
                   </Link>
                 </li>
                 <li>
-                  <Link href="/myteam" onClick={closeMenu}>
+                  <Link href="/squadra" onClick={closeMenu}>
                     <GiSoccerBall />
-                    La mia squadra
+                    Squadra
                   </Link>
                 </li>
                 <li>
                   <Link href="/gestione-team" onClick={closeMenu}>
                     <IoSettingsSharp />
-                    Gestisci team
+                    Eventi
                   </Link>
                 </li>
                 <li>
                   <Link href="/gestione-contratti" onClick={closeMenu}>
                     <FaFileContract />
-                    Gestisci contratti
+                    Contratti
                   </Link>
                 </li>
                 <li>
                   <Link href="/gestione-societaria" onClick={closeMenu}>
                     <MdMapsHomeWork />
-                    Gestione societaria
+                    Società
                   </Link>
                 </li>
                 <li>
                   <Link href="/cassa" onClick={closeMenu}>
                     <TbBusinessplan />
-                    Movimenti di cassa
+                    Sponsor
                   </Link>
                 </li>
               </ul>

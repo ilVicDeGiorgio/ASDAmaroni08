@@ -20,9 +20,9 @@ export default function Navbar(): ReactElement {
           </Link>
         </li>
         <li>
-          <Link href="/squadra" passHref>
+          <Link href="/partite" passHref>
             <PiUsersThree />
-            Squadra
+            Partite
           </Link>
         </li>
         <li>
