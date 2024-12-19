@@ -3,12 +3,14 @@
   justify-content: center;
   align-items: center;
   background-color: var(--bronze);
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 4.9375rem; // 95px in rem
   font-size: 1rem;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5); /* Ombra ancora più evidente */
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.6),
+    0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra marcata */
 
   ul {
     list-style: none;

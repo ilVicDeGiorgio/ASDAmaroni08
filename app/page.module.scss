@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--background-default);
-  // overflow-y: scroll;
+  overflow-y: hidden;
   grid-gap: 1rem;
   position: relative;
   min-height: 100vh; /* Assicura che il contenuto prenda almeno tutta l'altezza dello schermo */
@@ -62,10 +62,58 @@
   align-items: center;
   width: 100%;
   height: calc(100vh - 80px); /* Altezza dinamica meno una navbar ipotetica */
+  overflow-y: hidden;
 }
 
 .postorino2 img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* L'immagine riempie il contenitore */
+}
+
+/* Contenitore del video */
+.postorino2 {
+  position: fixed;
+  top: 0; /* Posiziona il contenitore all'inizio della pagina */
+  left: 0;
+  width: 100%;
+  height: 91vh; /* Altezza della finestra meno una piccola sezione */
+  display: flex;
+  justify-content: center; /* Centra il contenuto orizzontalmente */
+  align-items: center; /* Centra il contenuto verticalmente */
+  background-color: #1f1f1f; /* Sfondo scuro per mettere in risalto il video */
+  overflow: hidden; /* Nasconde le parti del video che escono dal contenitore */
+}
+
+/* Video */
+.videoBackground {
+  position: absolute; /* Posiziona il video assolutamente all'interno del contenitore */
+  top: 50%; /* Sposta il video al 50% dalla parte superiore */
+  left: 50%; /* Sposta il video al 50% dalla parte sinistra */
+  transform: translate(-50%, -50%); /* Centra il video */
+  width: 100%; /* Il video occuperà tutta la larghezza del contenitore */
+  height: 100%; /* Il video occuperà tutta l'altezza del contenitore */
+  object-fit: cover; /* Mantiene le proporzioni e riempie l'area senza deformarsi */
+  border-radius: 10px; /* Opzionale: arrotonda i bordi del video */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Opzionale: aggiunge un'ombra per effetto visivo */
+}
+
+.audioToggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.audioToggle:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
 }

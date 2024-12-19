@@ -10,7 +10,9 @@
   flex: 0 0 auto; // Non si espande né si contrae
   padding: 1rem;
   position: sticky;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Ombra più profonda */
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.6),
+    0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra marcata */
   overflow-x: hidden;
 
   z-index: 1000;
